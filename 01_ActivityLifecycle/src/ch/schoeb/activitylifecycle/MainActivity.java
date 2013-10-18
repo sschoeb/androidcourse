@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
+				// Finish this activity --> This will call onDestroy
 				finish();
 			}
 		});

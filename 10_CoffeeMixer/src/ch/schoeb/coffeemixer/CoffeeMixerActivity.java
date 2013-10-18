@@ -3,7 +3,6 @@ package ch.schoeb.coffeemixer;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -25,17 +24,23 @@ public class CoffeeMixerActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_coffee_mixer);
 
+		// Get all the checkbox's from the layout
 		milkCheckBox = (CheckBox) findViewById(R.id.checkBoxMilk);
 		sugarCheckBox = (CheckBox) findViewById(R.id.checkBoxSugar);
 		sprinklesCheckBox = (CheckBox) findViewById(R.id.checkBoxSprinkles);
 
+		// Get the calculate-button from the layout
 		Button calculateButton = (Button) findViewById(R.id.buttonCalculate);
+		
+		// Respond to the click on the button
 		calculateButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
+				
 				Coffee coffee = createCoffee();
 
+				// Start the PriceActivity
 				Intent intent = new Intent(CoffeeMixerActivity.this, PriceActivity.class);
 				intent.putExtra("price", coffee.getCost());
 				intent.putExtra("ingrediants", coffee.getIngredients());
