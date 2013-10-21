@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Day2_Exercise_08_StyleButton</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="styled_button">Styled Button</string>
+    <string name="not_styled_button">Not styled button</string>
+
+</resources>
