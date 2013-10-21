@@ -51,9 +51,4 @@ public class PostListAdapter extends BaseAdapter {
 		// 3. Set the comment/name for this view from the Post given by step 2
 		// --> Use setText(...)
 	}
-
-	static class ViewHolder {
-		TextView textViewComment;
-		TextView textViewName;
-	}
 }

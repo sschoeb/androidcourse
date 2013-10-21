@@ -17,7 +17,7 @@ public class MainActivity extends Activity implements ActionBar.OnNavigationList
 		actionBar.setDisplayShowTitleEnabled(false);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
 
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, new String[] { "FirstView", "SecondView" });
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, new String[] { "FirstView" });
 		actionBar.setListNavigationCallbacks(adapter, this);
 	}
 
@@ -28,7 +28,7 @@ public class MainActivity extends Activity implements ActionBar.OnNavigationList
 		if (position == 0) {
 			newFragment = new FirstViewFragment();
 		} else {
-			newFragment = new SecondViewFragment();
+			return false;
 		}
 
 		FragmentTransaction ft = getFragmentManager().beginTransaction();
