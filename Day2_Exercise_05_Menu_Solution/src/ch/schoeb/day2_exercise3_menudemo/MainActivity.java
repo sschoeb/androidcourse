@@ -1,8 +1,10 @@
 package ch.schoeb.day2_exercise3_menudemo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class MainActivity extends Activity {
 
@@ -18,14 +20,15 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
-	/**
-	 * TODO: Implement onOptionsItemSelected
-	 * 
-	 * 1. Get the checked item by item.getItemId() 
-	 * 2. Make sure the selected item is yours
-	 * 3. Create an Intent to start the DetailActivity
-	 * 
-	 */
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
 
-
+		switch (item.getItemId()) {
+		case R.id.action_details:
+			startActivity(new Intent(this, DetailActivity.class));
+			return true;
+		}
+		
+		return super.onOptionsItemSelected(item);
+	}
 }

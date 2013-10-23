@@ -1,7 +1,7 @@
-package ch.schoeb.day2_exercise3_menudemo;
+package com.example.day2_exercise7_resources;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.app.Activity;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
@@ -14,18 +14,9 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
-	/**
-	 * TODO: Implement onOptionsItemSelected
-	 * 
-	 * 1. Get the checked item by item.getItemId() 
-	 * 2. Make sure the selected item is yours
-	 * 3. Create an Intent to start the DetailActivity
-	 * 
-	 */
-
 
 }

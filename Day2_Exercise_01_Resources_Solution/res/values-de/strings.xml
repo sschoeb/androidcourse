@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Resourcen</string>
+    <string name="myportraitText">Portrait - Ansicht</string>
+    <string name="landscapeText">Landscape - Ansicht</string>
+
+</resources>
