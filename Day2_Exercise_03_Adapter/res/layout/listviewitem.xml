@@ -8,6 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin" >
 
     <ImageView
+        android:contentDescription="@string/icondescription"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/ic_launcher" />

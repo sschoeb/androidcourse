@@ -8,5 +8,6 @@
     <string name="show_details">Show details</string>
     <string name="firstviewfragment">FirstViewFragment</string>
     <string name="secondviewfragment">SecondViewFragment</string>
+    <string name="secondview">SecondView</string>
 
 </resources>

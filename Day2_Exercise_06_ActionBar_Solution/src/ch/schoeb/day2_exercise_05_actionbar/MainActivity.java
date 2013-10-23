@@ -33,6 +33,7 @@ public class MainActivity extends Activity implements ActionBar.OnNavigationList
 			break;
 		case 1:
 			newFragment = new SecondViewFragment();
+			break;
 		default:
 			return false;
 		}
