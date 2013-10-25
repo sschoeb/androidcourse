@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+	<!--  TODO: Implement your preferences here -->
+	
+	  <PreferenceCategory
+            android:title="Test">
+
+        <CheckBoxPreference
+                android:key="checkbox_preference"
+                android:title="Data"
+                android:summary="Summary" />
+
+    </PreferenceCategory>
+    
+	         <PreferenceScreen
+                android:key="screen_preference"
+                android:title="SubScreen"
+                android:summary="SubScreenSummery">
+
+            <!-- You can place more preferences here that will be shown on the next screen. -->
+
+            <CheckBoxPreference
+                    android:key="next_screen_checkbox_preference"
+                    android:title="asdasdsad"
+                    android:summary="aaaae" />
+
+        </PreferenceScreen>
+
+	
+</PreferenceScreen>

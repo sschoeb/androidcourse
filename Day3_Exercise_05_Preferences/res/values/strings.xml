@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Preferences</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_preferences">PreferencesActivity</string>
+    <string name="value_of_setting_x_">Value of Setting x:</string>
+    <string name="unknown">Unknown</string>
+
+</resources>
