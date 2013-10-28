@@ -11,7 +11,7 @@ import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 
-public class MainActivity extends Activity implements GooglePlayServicesClient.ConnectionCallbacks, GooglePlayServicesClient.OnConnectionFailedListener {
+public class MainActivity extends Activity  {
 
 	private TextView textViewLongitude;
 	private TextView textViewLatitude;
@@ -36,40 +36,24 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
 
 		textViewLatitude = (TextView) findViewById(R.id.textViewLatitude);
 		textViewLongitude = (TextView) findViewById(R.id.textViewLongitude);
-
-		client = new LocationClient(this, this, this);
+		
+		// TODO: Instantiate the LocationClient
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		client.connect();
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		client.disconnect();
 	}
 
-	@Override
-	public void onConnectionFailed(ConnectionResult arg0) {
-		textViewLongitude.setText("FAILED" + arg0.getErrorCode());
-	}
-
-	@Override
-	public void onConnected(Bundle arg0) {
-
-		LocationRequest request = LocationRequest.create();
-		request.setInterval(1000);
-		request.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-
-		client.requestLocationUpdates(request, locationListener);
-	}
-
-	@Override
-	public void onDisconnected() {
-		client.removeLocationUpdates(locationListener);
-	}
-
+	// TODO's:
+	// 1. Instantiate LocationClient
+	// 2. Connect locationclient
+	// 3. Implement interfaces for Connection and Connecatil failed callbacks
+	// 4. Create a new LocationRequest
+	// 5. Request location updates using the locationclient you instantieted in 1 as soon as you are connected
 }
