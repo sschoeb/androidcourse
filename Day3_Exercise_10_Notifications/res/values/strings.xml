@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_detail">DetailActivity</string>
     <string name="add_1">Add 1</string>
+    <string name="cancel">Cancel</string>
 
 </resources>
