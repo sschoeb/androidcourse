@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Day4_Exercise_05_HttpUrlConnection</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="url">URL</string>
+    <string name="load">Load</string>
+    <string name="no_data_loaded">No data loaded</string>
+
+</resources>
