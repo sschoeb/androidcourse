@@ -7,5 +7,6 @@
     <string name="title_activity_preferences">PreferencesActivity</string>
     <string name="value_of_setting_x_">Value of Setting x:</string>
     <string name="unknown">Unknown</string>
+    <string name="use_actionbar_to_find_your_settings">Use actionbar to find your settings</string>
 
 </resources>

@@ -2,9 +2,12 @@ package com.example.day3_exercise_03_preferences;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -29,4 +32,5 @@ public class MainActivity extends Activity {
 
 		return super.onOptionsItemSelected(item);
 	}
+
 }

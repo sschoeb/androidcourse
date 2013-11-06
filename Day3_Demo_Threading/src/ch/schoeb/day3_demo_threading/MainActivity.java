@@ -12,8 +12,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Button tv = (Button)findViewById(R.id.textView);
-		tv.setOnClickListener(new OnClickListener() {
+		Button button = (Button)findViewById(R.id.textView);
+		button.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
@@ -21,11 +21,11 @@ public class MainActivity extends Activity {
 					
 					@Override
 					public void run() {
-						Button tv = (Button)findViewById(R.id.textView);
-						tv.setText("Do it");
-						tv.setBackgroundColor(0xfff00000);
-						tv.clearFocus();
-						tv.forceLayout();
+						Button button = (Button)findViewById(R.id.textView);
+						button.setText("Do it");
+						button.setBackgroundColor(0xfff00000);
+						button.clearFocus();
+						button.forceLayout();
 					}
 				});
 				t.start();
