@@ -54,8 +54,7 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f060000;
         public static final int AppTheme=0x7f060001;
-        public static final int MyCustomBaseStyle=0x7f060002;
-        public static final int MyCustomBaseStyle_Custom=0x7f060004;
-        public static final int MyCustomStyle=0x7f060003;
+        public static final int DetailStyle=0x7f060003;
+        public static final int TitleStyle=0x7f060002;
     }
 }

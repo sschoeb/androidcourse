@@ -9,12 +9,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView style="@style/MyCustomBaseStyle.Custom"
+    <TextView
+        style="@style/TitleStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/title" />
 
-    <TextView style="@style/MyCustomBaseStyle"
+    <TextView
+        style="@style/DetailStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/value" />
+    
+    <TextView
+        style="@style/TitleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title" />
+
+    <TextView
+        style="@style/DetailStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/value" />

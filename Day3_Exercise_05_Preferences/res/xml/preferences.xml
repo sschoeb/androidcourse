@@ -23,6 +23,10 @@
                     android:key="next_screen_checkbox_preference"
                     android:title="asdasdsad"
                     android:summary="aaaae" />
+            
+            <EditTextPreference  android:key="mytestKey"
+                android:title="MyTitle"
+                android:summary="summary"/>
 
         </PreferenceScreen>
 

@@ -31,7 +31,13 @@ public class MainActivity extends Activity {
 	}
 
 	private void changeUsingRunOnUiThread() {
-		TextView textView = (TextView) findViewById(R.id.textViewRunOnUiThread);
-		textView.setText("This does work");
+		runOnUiThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				TextView textView = (TextView) findViewById(R.id.textViewRunOnUiThread);
+				textView.setText("This does work");
+			}
+		});
 	}
 }

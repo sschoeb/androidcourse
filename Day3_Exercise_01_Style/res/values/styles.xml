@@ -4,17 +4,16 @@
 
     <style name="AppTheme" parent="AppBaseTheme"></style>
 
-    <style name="MyCustomBaseStyle">
+  
+
+    <style name="TitleStyle" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:background">#0F0</item>
         <item name="android:textColor">#F00</item>
+    </style>
+    
+    <style name="DetailStyle" parent="android:Widget.Holo.Light.TextView">
+        <item name="android:textColor">#0FF</item>
         <item name="android:textSize">20sp</item>
     </style>
-
-    <style name="MyCustomStyle" parent="MyCustomBaseStyle">
-        <item name="android:textColor">#0F0</item>
-    </style>
-
-    <style name="MyCustomBaseStyle.Custom">
-        <item name="android:textColor">#00F</item>
-    </style>
-
+    
 </resources>

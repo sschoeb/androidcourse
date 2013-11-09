@@ -1,8 +1,7 @@
 package ch.schoeb.day3_exercise_04_asynctask;
 
 import android.app.Activity;
-import android.app.PendingIntent;
-import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,13 +27,49 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View view) {
-				// TODO: Execute your AsyncTask here
+				new Worker().execute();
 			}
 		});
-		
+
 	}
 
-	// TODO: Programm your AsyncTask here
-	// use "progressBar" to update the current progress
-	// use "textViewState" to show the current state (started/running/finished)
+	class Worker extends AsyncTask<Void, Integer, Void> {
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			progressBar.setProgress(0);
+			textViewState.setText("Started");
+		}
+
+		@Override
+		protected void onPostExecute(Void result) {
+			super.onPostExecute(result);
+			textViewState.setText("Finished");
+		}
+
+		@Override
+		protected Void doInBackground(Void... arg0) {
+
+			int progress = 0;
+			for(int i=0; i<10; i++)
+			{
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+				}
+				progress += 10;
+				publishProgress(progress);
+			}
+
+			return null;
+		}
+
+		@Override
+		protected void onProgressUpdate(Integer... values) {
+			super.onProgressUpdate(values);
+
+			progressBar.setProgress(values[0]);
+		}
+	}
 }
