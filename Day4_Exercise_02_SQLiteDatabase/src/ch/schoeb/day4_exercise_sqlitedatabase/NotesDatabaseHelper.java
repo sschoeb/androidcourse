@@ -15,12 +15,11 @@ public class NotesDatabaseHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		db.execSQL(NoteContract.CREATE_SQL);
+		// Execute create scripts
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		db.execSQL(NoteContract.DROP_SQL);
-		onCreate(db);
+		// Execute upgrade scripts
 	}
 }
