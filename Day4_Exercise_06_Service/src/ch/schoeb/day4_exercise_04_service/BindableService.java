@@ -8,17 +8,12 @@ import android.util.Log;
 
 public class BindableService extends Service {
 
-	private final IBinder binder = new BindableServiceBinder();
-
-	public class BindableServiceBinder extends Binder {
-		public BindableService getService() {
-			return BindableService.this;
-		}
-	}
+	//TODO: Create a binder here
 	
 	@Override
 	public IBinder onBind(Intent intent) {
-		return binder;
+		//TODO return your binder here
+		return null;
 	}
 
 	public void writeSomethingToLogFile(String data) {

@@ -28,7 +28,8 @@ public class MainActivity extends Activity implements LoaderManager.LoaderCallba
 		editText = (EditText) findViewById(R.id.editTextNote);
 		listView = (ListView) findViewById(R.id.listView);
 
-		simpleCursorAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, null, new String[] { Contracts.Notes.COLUMN_NAME }, new int[] { android.R.id.text1 }, 0);
+		String[] columns = new String[] { Contracts.Notes.COLUMN_NAME };
+		simpleCursorAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1, null, columns, new int[] { android.R.id.text1 }, 0);
 		listView.setAdapter(simpleCursorAdapter);
 
 		Button btnAdd = (Button) findViewById(R.id.insertButton);

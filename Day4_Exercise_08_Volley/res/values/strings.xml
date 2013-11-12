@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Volley</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="receive_all_posts">Receive all posts</string>
+    <string name="send_new_post">Send new Post</string>
+
+</resources>

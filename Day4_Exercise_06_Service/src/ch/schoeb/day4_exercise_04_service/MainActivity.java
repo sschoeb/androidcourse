@@ -1,6 +1,5 @@
 package ch.schoeb.day4_exercise_04_service;
 
-import ch.schoeb.day4_exercise_04_service.BindableService.BindableServiceBinder;
 import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
@@ -20,14 +19,13 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onServiceDisconnected(ComponentName componentName) {
-			Log.d("mydata", "NOT WORKING");
 			service = null;
 		}
 
 		@Override
 		public void onServiceConnected(ComponentName componentName, IBinder binder) {
-			Log.d("mydata", "GOT I");
-			service = ((BindableServiceBinder) binder).getService();
+			// TODO: Get service instance from your binder here
+			// You may have to cast the binder first...
 		}
 	};
 
@@ -55,22 +53,21 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		bindService(new Intent(this, BindableService.class), bindableServiceConnection, Context.BIND_AUTO_CREATE);
+		// TODO: Bind to BindableService here
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		unbindService(bindableServiceConnection);
+		// TODO: Make sure bindableService is released
 	}
 
 	private void writeToIntentService() {
-		Intent intent = new Intent(this, CustomIntentService.class);
-		intent.putExtra("data", "This is the data");
-		startService(intent);
+		// TODO: Send intent to CustomIntentService
+		// TODO: Pass "data" - extra to it
 	}
 
 	private void writeToBindableService() {
-		service.writeSomethingToLogFile("Data to be dumped");
+		// TODO: Write something to bindable service
 	}
 }

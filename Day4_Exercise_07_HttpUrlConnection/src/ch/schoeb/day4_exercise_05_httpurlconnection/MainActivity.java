@@ -9,6 +9,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import android.app.Activity;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +19,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -30,15 +34,26 @@ public class MainActivity extends Activity {
 		resultTextView = (TextView) findViewById(R.id.resultTextView);
 		urlEditText = (EditText) findViewById(R.id.urlEditText);
 
-
 		Button loadButton = (Button) findViewById(R.id.loadButton);
 		loadButton.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View view) {
+				
+				if(!isOnline())
+				{
+					Toast.makeText(MainActivity.this, "Check network connection", Toast.LENGTH_LONG).show();
+					return;
+				}
+				
 				new DataLoader().execute(urlEditText.getText().toString());
 			}
 		});
+	}
+
+	public boolean isOnline() {
+		//TODO: Do only allow requesting data when current active network is online
+		return false;
 	}
 
 	class DataLoader extends AsyncTask<String, Integer, String> {
@@ -71,14 +86,14 @@ public class MainActivity extends Activity {
 			while ((line = bufferedReader.readLine()) != null) {
 				inputStringBuilder.append(line);
 			}
-			String json = inputStringBuilder.toString();
-			return json;
+			String data = inputStringBuilder.toString();
+			return data;
 		}
-		
+
 		@Override
 		protected void onPostExecute(String result) {
 			super.onPostExecute(result);
-			
+
 			resultTextView.setText(result);
 		}
 
