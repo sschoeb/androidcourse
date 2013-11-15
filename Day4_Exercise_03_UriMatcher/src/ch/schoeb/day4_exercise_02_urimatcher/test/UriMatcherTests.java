@@ -13,6 +13,7 @@ public class UriMatcherTests extends TestCase {
 		// Arrange
 		int itemMatch = 1;
 		UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
+		matcher.addURI("ch.schoeb.dataprovider", "items", itemMatch);
 		// TODO: Fix problem here
 		
 		Uri uriToMatch = Uri.parse("content://ch.schoeb.dataprovider/items");
@@ -27,6 +28,7 @@ public class UriMatcherTests extends TestCase {
 	public void testadvanced_match() {
 		int itemMatch = 1;
 		UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
+		matcher.addURI("ch.schoeb.dataprovider", "item/#", itemMatch);
 		// TODO: Fix problem here
 
 		List<Uri> urisToMatch = new ArrayList<Uri>();
@@ -51,6 +53,6 @@ public class UriMatcherTests extends TestCase {
 
 		// Assert
 		// TODO: Fix problem here
-		assertEquals(5, result);
+		assertEquals(UriMatcher.NO_MATCH, result);
 	}
 }

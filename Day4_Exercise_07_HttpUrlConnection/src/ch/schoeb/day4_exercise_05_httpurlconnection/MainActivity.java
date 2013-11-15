@@ -39,21 +39,21 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View view) {
-				
-				if(!isOnline())
-				{
+
+				if (!isOnline()) {
 					Toast.makeText(MainActivity.this, "Check network connection", Toast.LENGTH_LONG).show();
 					return;
 				}
-				
+
 				new DataLoader().execute(urlEditText.getText().toString());
 			}
 		});
 	}
 
 	public boolean isOnline() {
-		//TODO: Do only allow requesting data when current active network is online
-		return false;
+		ConnectivityManager connMgr = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+		return (networkInfo != null && networkInfo.isConnected());
 	}
 
 	class DataLoader extends AsyncTask<String, Integer, String> {

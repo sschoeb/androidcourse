@@ -1,7 +1,14 @@
 package ch.schoeb.day4_exercise_10_filesystem;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -34,11 +41,26 @@ public class MainActivity extends Activity {
 	}
 
 	private void createExternalFile() {
-		//TODO: Create file on external storage here
+
+		File root = Environment.getExternalStorageDirectory();
+		File newFile = new File(root + "/mydemofile");
+
+		try {
+			newFile.createNewFile();
+		} catch (IOException e) {
+		}
+
 	}
-	
+
 	private void createInternalFile() {
-		//TODO: Create file on internal storage here
+
+		File root = getFilesDir();
+		File newFile = new File(root + "/mydemofile");
+
+		try {
+			newFile.createNewFile();
+		} catch (IOException e) {
+		}
 	}
-	
+
 }

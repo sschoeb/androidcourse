@@ -38,14 +38,20 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		// TODO: Create database here
+		database = new NotesDatabaseHelper(this).getWritableDatabase();
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		// TODO: Query database here
 
+		queryDatabase();
+	}
+
+	private void queryDatabase() {
+		String[] columns = new String[]{NoteContract._ID, NoteContract.COLUMN_NAME};
+		cursor = database.query(NoteContract.TABLE_NAME, columns, null, null, null, null, null);
+		
 		setAdapter(cursor);
 	}
 
@@ -61,20 +67,28 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onPause() {
 		super.onPause();
-		// TODO: make sure cursor is no more open
 
+		cursor.close();
 	}
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
 		// TODO: Make sure database is no more open
+		database.close();
 	}
 
 	private void insertItemIntoDatabase() {
 		String newNote = editText.getText().toString();
 		
+		ContentValues values = new ContentValues();
+		values.put(NoteContract.COLUMN_NAME, newNote);
+		database.insert(NoteContract.TABLE_NAME, null, values);
+		
+		queryDatabase();
+		
 		//TODO: Insert item into database here
 		//TODO: Make list does refresh 
+		
 	}
 }
