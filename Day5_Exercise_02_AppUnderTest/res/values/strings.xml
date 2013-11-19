@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppUnderTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="first_summand">First summand</string>
+    <string name="second_summand">Second summand</string>
+    <string name="calculate">Calculate</string>
+    <string name="result_">Result:</string>
+    <string name="clear">Clear</string>
+
+</resources>
