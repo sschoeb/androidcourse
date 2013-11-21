@@ -20,31 +20,23 @@ public class MainActivityFixture extends ActivityInstrumentationTestCase2<MainAc
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
-
+		
 		setActivityInitialTouchMode(false);
-		_activity = getActivity();
+		
+		// TODO: Create your activity here
 	}
 
 	@UiThreadTest
 	public void testCalculationWorking() {
 		
 		// Arrange
-		double firstNumber = 5;
-		double secondNumber = 20;
-		double expectedResult = firstNumber + secondNumber;
-		EditText editTextFirsNumber = (EditText) _activity.findViewById(R.id.editTextNumberOne);
-		EditText editTextSecondNumber = (EditText) _activity.findViewById(R.id.editTextNumberTwo);
-		Button buttonCalculate = (Button) _activity.findViewById(R.id.submitButton);
-		TextView resultTextView = (TextView) _activity.findViewById(R.id.textViewResult);
+		// TODO: Get all the views you need -> same methods as when accessing views in normal activity
 
 		// Act
-		editTextFirsNumber.setText(firstNumber + "");
-		editTextSecondNumber.setText(secondNumber + "");
-		buttonCalculate.performClick();
+		// TODO: Enter text and click the button
 
 		// Assert
-		double calculatedResult = Double.parseDouble(resultTextView.getText().toString());
-		assertEquals(expectedResult, calculatedResult);
+		// TODO: Make sure the result is correct using assertXXX()-methods
 	}
 
 }

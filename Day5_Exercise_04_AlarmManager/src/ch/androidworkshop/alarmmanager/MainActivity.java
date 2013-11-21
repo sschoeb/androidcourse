@@ -76,12 +76,10 @@ public class MainActivity extends Activity {
 		target.set(Calendar.MILLISECOND, 0);
 		
 		// TODO: Make sure alarm is set here
-		Log.d("AlarmReceiver", "Set alarm");
-		Intent intent = new Intent(this, AlarmReceiver.class);
-		PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
-		
-		AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
-		manager.set(AlarmManager.RTC_WAKEUP, target.getTimeInMillis(), pendingIntent);
+		// - Create an Intent with AlarmReceiver.class as target
+		// - Create a PendingIntent for a BroadCast 
+		// - Get AlarmManager
+		// - Set alarm to the time defined by "target"-calendar instance
 	
 	}
 }

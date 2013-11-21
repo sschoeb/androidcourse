@@ -12,20 +12,14 @@ public class AlarmReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		
-		Intent notificationIntent = new Intent(context, NotifiedActivity.class);
-		PendingIntent targetIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
-		
-		Notification.Builder builder = new Notification.Builder(context);
-		builder.setContentTitle("ALARM");
-		builder.setContentText("A new alarm arrived...");
-		builder.setSmallIcon(R.drawable.ic_launcher);
-		builder.addAction(R.drawable.ic_launcher, "Open", targetIntent);
-		Notification notification = builder.build();
-		
-		NotificationManager manager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-		manager.notify(1, notification);
-		
-		Log.d("AlarmReceiver", "Got alarm received");
+
+		// TODO: Create notification here
+		// - Create a target Intent
+		// - Create a PendingIntent which should be started when clicked on the
+		// Notification
+		// - Build a notification
+		// -> Do not forget to set the small icon / content title and content
+		// text, otherwise the notification will not show up
+		// - get NotificationManager
 	}
 }
