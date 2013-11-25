@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
 
-public class SmsBroadcastReceiver {
+public class SmsBroadcastReceiver extends BroadcastReceiver {
 
 	// TODO 1: Implement your receiver here
 	// TODO 2: Navigate to the MainActivity when you have received the SMS
@@ -30,5 +30,10 @@ public class SmsBroadcastReceiver {
 			
 		}
 		return null;
+	}
+
+	@Override
+	public void onReceive(Context context, Intent intent) {
+		SmsMessage myNewMessage = getFirstSmsFromIntent(intent);
 	}
 }

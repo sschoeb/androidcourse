@@ -80,6 +80,21 @@ public class MainActivity extends Activity {
 		// - Create a PendingIntent for a BroadCast 
 		// - Get AlarmManager
 		// - Set alarm to the time defined by "target"-calendar instance
+		
+		Intent targetIntent = new Intent(this, AlarmReceiver.class);
+		PendingIntent operation = PendingIntent.getBroadcast(this, 0, targetIntent, 0);
+		
+		AlarmManager manager = (AlarmManager)getSystemService(ALARM_SERVICE);
+		manager.set(AlarmManager.RTC_WAKEUP, target.getTimeInMillis(), operation);
+		
 	
 	}
 }
+
+
+
+
+
+
+
+

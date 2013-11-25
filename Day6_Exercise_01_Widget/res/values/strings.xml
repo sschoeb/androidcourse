@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Widget</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="plus_1">Plus 1</string>
+    <string name="minus_1">Minus 1</string>
+    <string name="current_counter_value_">Current counter value:</string>
+    <string name="PlusSign">+</string>
+    <string name="MinusSign">-</string>
+    <string name="no_layout">NO LAYOUT</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="nr_1">Nr. 1</string>
+    <string name="nr_2">Nr. 2</string>
+
+</resources>

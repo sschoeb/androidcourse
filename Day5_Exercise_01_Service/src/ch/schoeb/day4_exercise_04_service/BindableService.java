@@ -10,13 +10,35 @@ public class BindableService extends Service {
 
 	//TODO: Create a binder here
 	
+	public class BindableServiceBinder extends Binder {
+		
+		public BindableService getService() {
+			return BindableService.this;
+		}
+		
+	}
+
+	private final IBinder binder = new BindableServiceBinder();
+	
 	@Override
 	public IBinder onBind(Intent intent) {
 		//TODO return your binder here
-		return null;
+		return binder;
 	}
-
+	
 	public void writeSomethingToLogFile(String data) {
-		Log.d("BindableService", data);
+		Log.d("CustomIntentService", data);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

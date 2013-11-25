@@ -31,7 +31,9 @@ public class MainActivityUnitTestFixture extends ActivityUnitTestCase<MainActivi
 		// TODO: Check if the EditText for the first number is visible
 		// - access views on _activity as you do in the onCreate of a normal
 		// activity
-
+		
+		EditText editText = (EditText)_activity.findViewById(R.id.editTextNumberOne);
+		assertEquals(View.VISIBLE, editText.getVisibility());
 	}
 
 }

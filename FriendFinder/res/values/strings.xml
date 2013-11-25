@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FriendFinder</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="action_refresh">Update</string>
+    <string name="title_activity_post_detail">Post</string>
+    <string name="title_activity_add_post">Post erstellen</string>
+    <string name="title_activity_home">Friend Finder</string>
+    <string name="title_section_map">Map</string>
+    <string name="title_section_list">List</string>
+    <string name="action_add_post">Post hinzufügen</string>
+    <string name="send">Senden</string>
+    <string name="add_post_title">Was möchtest du mitteilen?</string>
+    <string name="add_post_yourmessage_hint">Deine Nachricht...</string>
+    <string name="activity_post_detail_name">Name</string>
+    <string name="activity_post_detail_comment">Comment</string>
+    <string name="activity_post_detail_longitude">Longitude</string>
+    <string name="activity_post_detail_latitude">Latitude</string>
+    <string name="pref_category_general">Allgemein</string>
+    <string name="pref_category_connection">Verbindung</string>
+    <string name="pref_general_username">Benutzername</string>
+    <string name="pref_title_autosync">Posts automatisch mit Cloud synchronisieren</string>
+    <string name="pref_general_default_username">Anonymous</string>
+    <string name="title_activity_settings">Einstellungen</string>
+
+</resources>

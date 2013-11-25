@@ -1,0 +1,24 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="pref_key_storage_settings"
+        android:title="@string/pref_category_general" >
+        <EditTextPreference
+            android:defaultValue="@string/pref_general_default_username"
+            android:inputType="textCapWords"
+            android:key="general_username"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_general_username" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_key_storage_settings"
+        android:title="@string/pref_category_connection" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="autosync"
+            android:title="@string/pref_title_autosync" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
