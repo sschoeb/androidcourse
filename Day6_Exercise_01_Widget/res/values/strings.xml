@@ -14,5 +14,6 @@
     <string name="title_activity_second">SecondActivity</string>
     <string name="nr_1">Nr. 1</string>
     <string name="nr_2">Nr. 2</string>
+    <string name="choose_">"Choose: "</string>
 
 </resources>

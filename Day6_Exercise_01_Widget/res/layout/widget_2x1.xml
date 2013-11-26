@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@drawable/appwidget_bg" >
 
     <Button
         android:id="@+id/buttonOpenFirst"
@@ -16,4 +17,5 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/nr_2" />
-</LinearLayout>
+
+</LinearLayout>

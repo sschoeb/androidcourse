@@ -1,8 +1,7 @@
 package ch.androidworkshop.widget;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
+import android.os.Bundle;
 
 public class FirstActivity extends Activity {
 
